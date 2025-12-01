@@ -27,39 +27,30 @@ mkdir -p "$MNT_DIR"
 # Mount the filesystem using a loop device
 sudo mount -o loop "$IMG_PATH" "$MNT_DIR"
 
-echo ">> Creating fragmentation edge case..."
-
+# The test
+REALFILE="/path/to/original.bin" #paste here the file to copy over to test on
 FRAGDIR="$MNT_DIR/fragtest"
 mkdir -p "$FRAGDIR"
 
-# Step 1: Fill disk with small files to fragment free space
-echo ">> Generating scatter files..."
-for i in $(seq 1 2000); do
-    dd if=/dev/zero of="$FRAGDIR/junk_$i.bin" bs=4K count=1 &>/dev/null
-done
+TARGET="$FRAGDIR/fragmented_real_file.bin"
+ALTFILE="$FRAGDIR/helper.txt"
 
-# Step 2: Delete every 2nd file to create interleaved free blocks
-echo ">> Deleting half to create holes..."
-for i in $(seq 2 2 2000); do
-    rm "$FRAGDIR/junk_$i.bin"
-done
+CHUNK_SIZE=4096   # 4 KB chunks tend to produce strong fragmentation
 
-sync
+echo ">> Splitting real file into fragments..."
+split -b $CHUNK_SIZE "$REALFILE" /tmp/fragpiece_
 
-# Step 3: Create a final file that must span scattered free blocks
-echo ">> Creating fragmented target file..."
-TARGET="$FRAGDIR/fragmented_file.bin"
+echo ">> Building fragmented file..."
+for piece in /tmp/fragpiece_*; do
+    cat "$piece" >> "$TARGET"
 
-# Write in many chunks so allocator constantly searches free space
-for i in $(seq 1 300); do
-    dd if=/dev/urandom bs=8K count=1 >> "$TARGET" 2>/dev/null
+    echo "x_" >> "$ALTFILE"
 done
 
 sync
 
-# Optional: Verify fragmentation using debugfs (safe read-only)
-echo ">> Checking extent map..."
-sudo debugfs -R "stat $TARGET" "$IMG_PATH" | grep -E "EXTENTS|LEVEL"
+# cleanup split pieces
+rm /tmp/fragpiece_*
 
 # Clean Up
 sudo umount "$MNT_DIR"
