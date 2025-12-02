@@ -40,7 +40,4 @@ sync
 echo ">> Cleanly unmounting"
 sudo umount "$MNT_DIR"
 
-echo ">> Marking filesystem as NEEDS RECOVERY (dirty journal flag)"
-sudo tune2fs -E force_recovery "$IMG_PATH"
-
 echo ">> Done. Image created at $IMG_PATH"

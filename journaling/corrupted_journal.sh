@@ -80,7 +80,4 @@ echo "   Will corrupt journal block number: $CORRUPT_BLK"
 echo ">> Corrupting one journal block with zeros"
 sudo dd if=/dev/zero of="$IMG_PATH" bs="$BLOCK_SIZE" seek="$CORRUPT_BLK" count=1 conv=notrunc
 
-echo ">> Marking filesystem as NEEDS RECOVERY (dirty journal flag)"
-sudo tune2fs -E force_recovery "$IMG_PATH"
-
 echo ">> Done. Image created at $IMG_PATH (journal block $CORRUPT_BLK zeroed)"
