@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-NAME="ext4_journal_dirty"
+NAME="ext4_deleted_dirty"
 SIZE_MB=100
 
 OUTPUT_DIR="."
@@ -25,16 +25,19 @@ fi
 echo ">> Mounting image"
 sudo mount -o loop "$IMG_PATH" "$MNT_DIR"
 
-echo ">> Creating some normal files (journal activity)"
-sudo sh -c "echo 'This is a committed file' > '$MNT_DIR/committed.txt'"
-sudo sh -c "mkdir -p '$MNT_DIR/subdir'"
-sudo sh -c "echo 'Another file' > '$MNT_DIR/subdir/another.txt'"
+echo ">> Creating a file that will later be deleted"
+sudo sh -c "echo 'SECRET FORENSIC PAYLOAD' > '$MNT_DIR/secret_deleted.txt'"
+sync
+
+echo ">> Deleting the file (journal will contain creation + deletion metadata)"
+sudo rm "$MNT_DIR/secret_deleted.txt"
+sync
+
+echo ">> Creating a small extra file to show current live state"
+sudo sh -c "echo 'I am still here' > '$MNT_DIR/still_here.txt'"
 sync
 
 echo ">> Cleanly unmounting"
 sudo umount "$MNT_DIR"
-
-echo ">> Marking filesystem as NEEDS RECOVERY (dirty journal flag)"
-sudo tune2fs -E force_recovery "$IMG_PATH"
 
 echo ">> Done. Image created at $IMG_PATH"
