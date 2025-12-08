@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-NAME="ext4_deleted_dirty"
+NAME="deleted_file"
 SIZE_MB=100
 
 OUTPUT_DIR="."

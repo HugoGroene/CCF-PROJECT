@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-NAME="ext4_corrupt_dirty"
+NAME="corrupted_journal"
 SIZE_MB=100
 
 OUTPUT_DIR="."
@@ -34,44 +34,22 @@ echo ">> Cleanly unmounting before corruption"
 sudo umount "$MNT_DIR"
 
 echo ">> Determining block size"
-BLOCK_SIZE=$(sudo dumpe2fs -h "$IMG_PATH" 2>/dev/null | awk -F: '/Block size:/ {gsub(/ /,"",$2); print $2}')
+BLOCK_SIZE=$(sudo dumpe2fs -h "$IMG_PATH" 2>/dev/null | \
+  awk -F: '/Block size:/ {gsub(/ /,"",$2); print $2}')
 if [ -z "${BLOCK_SIZE:-}" ]; then
   echo "ERROR: Could not determine block size." >&2
   exit 1
 fi
 echo "   Block size: $BLOCK_SIZE"
 
-echo ">> Locating a journal data block (inode 8 is the journal)"
-JBLK=$(sudo debugfs -R "stat <8>" "$IMG_PATH" 2>/dev/null | awk '
-  $1 == "EXTENTS:" {mode="extents"; next}
-  mode=="extents" {
-    # find first start-end extent like "12345-12400"
-    for (i=1;i<=NF;i++) {
-      if ($i ~ /^[0-9]+-[0-9]+$/) {
-        split($i,a,"-");
-        print a[1];
-        exit;
-      }
-    }
-  }
-  $1 == "BLOCKS:" {mode="blocks"; next}
-  mode=="blocks" {
-    # older style "BLOCKS:" listing: first numeric is fine
-    for (i=1;i<=NF;i++) {
-      gsub(/[(),]/,"",$i);
-      if ($i ~ /^[0-9]+$/) {
-        print $i;
-        exit;
-      }
-    }
-  }
-')
-
-if [ -z "${JBLK:-}" ]; then
-  echo "ERROR: Could not determine a journal block from debugfs output." >&2
-  echo "       Try running: sudo debugfs -R \"stat <8>\" \"$IMG_PATH\" manually."
+echo ">> Locating first journal block via debugfs bmap (inode 8 is the journal)"
+JBLK=$(sudo debugfs -R "bmap <8> 0" "$IMG_PATH" 2>/dev/null | tail -n 1 | tr -d ' ')
+if ! [[ "$JBLK" =~ ^[0-9]+$ ]]; then
+  echo "ERROR: debugfs did not return a numeric block for journal inode." >&2
+  echo "       Try running: sudo debugfs -R \"bmap <8> 0\" \"$IMG_PATH\" manually." >&2
   exit 1
 fi
+echo "   First journal block (physical): $JBLK"
 
 # To avoid the very first header block, nudge one block forward
 CORRUPT_BLK=$((JBLK + 1))
