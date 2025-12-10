@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-NAME="inode_stored"
+NAME="inode_stored_2"
 SIZE_MB=100
 
 OUTPUT_DIR="."
