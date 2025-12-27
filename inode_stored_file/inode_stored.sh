@@ -33,7 +33,6 @@ if ! sudo mount -o loop "$IMG_PATH" "$MNT_DIR"; then
 fi
 
 echo ">> Creating a very small file that should be stored inline"
-# Keep it small (< 60 bytes) so it fits comfortably into inline data
 sudo sh -c "printf 'INLINE_INODE_PAYLOAD_123' > '$MNT_DIR/inline.txt'"
 sync
 

@@ -37,6 +37,19 @@ echo ">> Creating a small extra file to show current live state"
 sudo sh -c "echo 'I am still here' > '$MNT_DIR/still_here.txt'"
 sync
 
+echo ">> Creating a tiny PNG file"
+# Real PNG signature + dummy payload + IEND chunk
+sudo sh -c "printf '\x89PNG\r\n\x1a\nFAKEPNGDATA\x00\x00\x00\x00IEND\xaeB\x82' > '$MNT_DIR/testpng.png'"
+sync
+
+echo ">> Creating a file that will later be deleted"
+sudo sh -c "echo 'SECRET FORENSIC PAYLOAD' > '$MNT_DIR/secret_deleted_at_end.txt'"
+sync
+
+echo ">> Deleting the file (journal will contain creation + deletion metadata)"
+sudo rm "$MNT_DIR/secret_deleted_at_end.txt"
+sync
+
 echo ">> Cleanly unmounting"
 sudo umount "$MNT_DIR"
 

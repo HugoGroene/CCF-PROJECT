@@ -30,6 +30,11 @@ sudo sh -c "echo 'file one' > '$MNT_DIR/one.txt'"
 sudo sh -c "echo 'file two' > '$MNT_DIR/two.txt'"
 sync
 
+echo ">> Creating a tiny PNG file"
+# Real PNG signature + dummy payload + IEND chunk
+sudo sh -c "printf '\x89PNG\r\n\x1a\nFAKEPNGDATA\x00\x00\x00\x00IEND\xaeB\x82' > '$MNT_DIR/testpng.png'"
+sync
+
 echo ">> Cleanly unmounting before corruption"
 sudo umount "$MNT_DIR"
 
