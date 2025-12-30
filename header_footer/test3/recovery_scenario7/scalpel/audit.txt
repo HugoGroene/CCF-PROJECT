@@ -1,0 +1,18 @@
+
+Scalpel version 1.60 audit file
+Started at Tue Dec  9 01:24:22 2025
+Command line:
+scalpel -c /home/jeeva/ccf2/header/scalpel_pdf.conf -o /home/jeeva/ccf2/header/ccf_output/recovery_scenario8/scalpel /home/jeeva/ccf2/header/ccf_output/scenario8_null_padded.img 
+
+Output directory: /home/jeeva/ccf2/header/ccf_output/recovery_scenario8/scalpel
+Configuration file: /home/jeeva/ccf2/header/scalpel_pdf.conf
+
+Opening target "/home/jeeva/ccf2/header/ccf_output/scenario8_null_padded.img"
+
+The following files were carved:
+File		  Start			Chop		Length		Extracted From
+00000001.pdf      7536740		NO         19991194		scenario8_null_padded.img
+00000000.pdf      7536740		NO         19991195		scenario8_null_padded.img
+
+
+Completed at Tue Dec  9 01:24:22 2025

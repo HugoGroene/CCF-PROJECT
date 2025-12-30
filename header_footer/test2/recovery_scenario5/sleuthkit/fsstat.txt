@@ -1,0 +1,61 @@
+FILE SYSTEM INFORMATION
+--------------------------------------------
+File System Type: Ext4
+Volume Name: 
+Volume ID: f4b37a6aaa8ac59aa34e12f890988040
+
+Last Written at: 2025-12-09 01:07:40 (UTC)
+Last Checked at: 2025-12-09 01:07:01 (UTC)
+
+Last Mounted at: 2025-12-09 01:07:01 (UTC)
+Unmounted properly
+Last mounted on: /home/jeeva/ccf2/header/ccf_output/mnt
+
+Source OS: Linux
+Dynamic Structure
+Compat Features: Journal, Ext Attributes, Resize Inode, Dir Index
+InCompat Features: Filetype, Extents, 64bit, Flexible Block Groups, 
+Read Only Compat Features: Sparse Super, Large File, Huge File, Extra Inode Size
+
+Journal ID: 00
+Journal Inode: 8
+
+METADATA INFORMATION
+--------------------------------------------
+Inode Range: 1 - 3841
+Root Directory: 2
+Free Inodes: 2591
+Inode Size: 256
+
+CONTENT INFORMATION
+--------------------------------------------
+Block Groups Per Flex Group: 16
+Block Range: 0 - 3839
+Block Size: 4096
+Free Blocks: 76
+
+BLOCK GROUP INFORMATION
+--------------------------------------------
+Number of Block Groups: 1
+Inodes per group: 3840
+Blocks per group: 32768
+
+Group: 0:
+  Block Group Flags: [INODE_ZEROED, ]
+  Inode Range: 1 - 3840
+  Block Range: 0 - 3839
+  Layout:
+    Super Block: 0 - 0
+    Group Descriptor Table: 1 - 1
+    Group Descriptor Growth Blocks: 2 - 2
+    Data bitmap: 3 - 3
+    Inode bitmap: 19 - 19
+    Inode Table: 35 - 274
+    Uninit Data Bitmaps: 3 - 18
+    Uninit Inode Bitmaps: 19 - 34
+    Uninit Inode Table: 35 - 3874
+    Data Blocks: 3875 - 3839
+  Free Inodes: 2591 (67%)
+  Free Blocks: 76 (1%)
+  Total Directories: 2
+  Stored Checksum: 0x5B55

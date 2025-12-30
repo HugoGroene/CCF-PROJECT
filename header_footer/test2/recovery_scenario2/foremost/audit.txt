@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Dec  9 01:07:53 2025
+Invocation: foremost -t pdf -i /home/jeeva/ccf2/header/ccf_output/scenario2_truncated.img -o /home/jeeva/ccf2/header/ccf_output/recovery_scenario2/foremost -q 
+Output directory: /home/jeeva/ccf2/header/ccf_output/recovery_scenario2/foremost
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: /home/jeeva/ccf2/header/ccf_output/scenario2_truncated.img
+Start: Tue Dec  9 01:07:53 2025
+Length: 50 MB (52428800 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Tue Dec  9 01:07:53 2025
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Tue Dec  9 01:07:53 2025

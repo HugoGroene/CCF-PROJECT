@@ -1,7 +1,30 @@
-# To run the code 
 
-    Step 1: Choose the neccessary manipulations by uncommenting items from the config file.
+# CCF Disk Image Scenario Generator
 
-    Step 2: Pass the file which needs to be modified while running the script
+## Overview
+This script generates ext4 disk images containing common file carving failure scenarios used in digital forensics.  
+It creates controlled filesystem and raw-block edge cases to evaluate forensic parsers and file carvers.
 
-        ./ccf.sh ./evidence/"File_name"
+
+---
+
+## Requirements
+- Linux
+- `sudo` access
+- Tools: `dd`, `losetup`, `mkfs.ext4`, `filefrag`, `debugfs`, `xxd`
+
+---
+
+## Files
+- `run.sh` – main scenario generation script  
+- `test2.pdf` – change the file name in script to use a specific one. 
+- `ccf_output/` – output directory containing generated disk images  
+
+---
+
+## Usage
+
+### How to run
+```bash
+sudo ./run.sh
+```

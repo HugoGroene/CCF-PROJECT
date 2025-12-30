@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Dec  9 01:25:55 2025
+Invocation: foremost -t pdf -i /home/jeeva/ccf2/header/ccf_output/scenario4_middle_overwrite.img -o /home/jeeva/ccf2/header/ccf_output/recovery_scenario4/foremost -q 
+Output directory: /home/jeeva/ccf2/header/ccf_output/recovery_scenario4/foremost
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: /home/jeeva/ccf2/header/ccf_output/scenario4_middle_overwrite.img
+Start: Tue Dec  9 01:25:55 2025
+Length: 50 MB (52428800 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00014720.pdf 	       2 MB 	    7536640 	 
+Finish: Tue Dec  9 01:25:56 2025
+
+1 FILES EXTRACTED
+	
+pdf:= 1
+------------------------------------------------------------------
+
+Foremost finished at Tue Dec  9 01:25:56 2025

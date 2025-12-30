@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Dec  9 01:23:58 2025
+Invocation: foremost -t pdf -i /home/jeeva/ccf2/header/ccf_output/scenario5_interleaved_files.img -o /home/jeeva/ccf2/header/ccf_output/recovery_scenario5/foremost -q 
+Output directory: /home/jeeva/ccf2/header/ccf_output/recovery_scenario5/foremost
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: /home/jeeva/ccf2/header/ccf_output/scenario5_interleaved_files.img
+Start: Tue Dec  9 01:23:58 2025
+Length: 15 MB (15728640 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Tue Dec  9 01:23:58 2025
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Tue Dec  9 01:23:58 2025
