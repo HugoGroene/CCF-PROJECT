@@ -1,0 +1,16 @@
+
+Scalpel version 1.60 audit file
+Started at Sat Dec  6 11:44:04 2025
+Command line:
+scalpel -o /home/kali/Desktop/CCF proj/test_output/scalpel_output /home/kali/Desktop/CCF proj/output/fragmented.img 
+
+Output directory: /home/kali/Desktop/CCF proj/test_output/scalpel_output
+Configuration file: /etc/scalpel/scalpel.conf
+
+Opening target "/home/kali/Desktop/CCF proj/output/fragmented.img"
+
+The following files were carved:
+File		  Start			Chop		Length		Extracted From
+
+
+Completed at Sat Dec  6 11:44:04 2025

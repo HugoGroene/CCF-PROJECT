@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Dec  9 11:23:58 2025
+Invocation: foremost -v -o /home/kali/Desktop/CCF proj/test_output/foremost_output_del_pdf ./output/deleted.img -t pdf 
+Output directory: /home/kali/Desktop/CCF proj/test_output/foremost_output_del_pdf
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: ./output/deleted.img
+Start: Tue Dec  9 11:23:58 2025
+Length: 20 MB (20971520 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Tue Dec  9 11:23:58 2025
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Tue Dec  9 11:23:58 2025

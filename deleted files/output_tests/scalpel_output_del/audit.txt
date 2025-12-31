@@ -1,0 +1,102 @@
+
+Scalpel version 1.60 audit file
+Started at Tue Dec  9 10:24:08 2025
+Command line:
+scalpel -o /home/kali/Desktop/CCF proj/test_output/scalpel_output_del /home/kali/Desktop/CCF proj/output/deleted.img 
+
+Output directory: /home/kali/Desktop/CCF proj/test_output/scalpel_output_del
+Configuration file: /etc/scalpel/scalpel.conf
+
+Opening target "/home/kali/Desktop/CCF proj/output/deleted.img"
+
+The following files were carved:
+File		  Start			Chop		Length		Extracted From
+00000001.jpg      4754202		NO          3856339		deleted.img
+00000000.jpg      4751876		NO          3858665		deleted.img
+00000018.jpg      8913920		NO          5101090		deleted.img
+00000017.jpg      8208186		NO          5232455		deleted.img
+00000016.jpg      8143422		NO          5228463		deleted.img
+00000015.jpg      8096387		NO          4800251		deleted.img
+00000014.jpg      8027909		NO          4868729		deleted.img
+00000013.jpg      7922479		NO          4974159		deleted.img
+00000012.jpg      7887105		NO          5009533		deleted.img
+00000011.jpg      7702122		NO          5194516		deleted.img
+00000010.jpg      7646362		NO          5221163		deleted.img
+00000009.jpg      7579460		NO          5219172		deleted.img
+00000008.jpg      7513654		NO          5177077		deleted.img
+00000007.jpg      7470873		NO          5219858		deleted.img
+00000006.jpg      7033062		NO          5238021		deleted.img
+00000005.jpg      7001878		NO          5230903		deleted.img
+00000004.jpg      6765570		NO          5188415		deleted.img
+00000003.jpg      6708361		NO          5211142		deleted.img
+00000002.jpg      6296920		NO          5236179		deleted.img
+00000019.jpg     10494131		NO          4655424		deleted.img
+00000020.jpg     11358107		NO          5236405		deleted.img
+00000021.jpg     11509035		NO          5225314		deleted.img
+00000022.jpg     11539428		NO          5239679		deleted.img
+00000023.jpg     11571828		NO          5207279		deleted.img
+00000024.jpg     11623702		NO          5155405		deleted.img
+00000025.jpg     11650641		NO          5128466		deleted.img
+00000026.jpg     11682845		NO          5096262		deleted.img
+00000027.jpg     11711919		NO          5067188		deleted.img
+00000028.jpg     11734209		NO          5231254		deleted.img
+00000029.jpg     11826456		NO          5238428		deleted.img
+00000030.jpg     11937631		NO          5173907		deleted.img
+00000031.jpg     12040771		NO          5200523		deleted.img
+00000032.jpg     12064269		NO          5177025		deleted.img
+00000033.jpg     12103565		NO          5223047		deleted.img
+00000034.jpg     12131388		NO          5195224		deleted.img
+00000035.jpg     12148782		NO          5177830		deleted.img
+00000036.jpg     12149104		NO          5177508		deleted.img
+00000037.jpg     12183693		NO          5142919		deleted.img
+00000038.jpg     12184015		NO          5142597		deleted.img
+00000039.jpg     12217456		NO          5109156		deleted.img
+00000040.jpg     12217778		NO          5108834		deleted.img
+00000041.jpg     12242090		NO          5240608		deleted.img
+00000042.jpg     12242412		NO          5240286		deleted.img
+00000043.jpg     12268138		NO          5222351		deleted.img
+00000044.jpg     12268460		NO          5222029		deleted.img
+00000045.jpg     12291659		NO          5232289		deleted.img
+00000046.jpg     12291981		NO          5231967		deleted.img
+00000047.jpg     12317854		NO          5226120		deleted.img
+00000048.jpg     12318176		NO          5225798		deleted.img
+00000049.jpg     12346471		NO          5197503		deleted.img
+00000050.jpg     12346793		NO          5197181		deleted.img
+00000051.jpg     12372945		NO          5226677		deleted.img
+00000052.jpg     12373267		NO          5226355		deleted.img
+00000053.jpg     12402989		NO          5196633		deleted.img
+00000054.jpg     12403311		NO          5196311		deleted.img
+00000055.jpg     12428997		NO          5236499		deleted.img
+00000056.jpg     12429319		NO          5236177		deleted.img
+00000057.jpg     12453170		NO          5212326		deleted.img
+00000058.jpg     12479758		NO          5185738		deleted.img
+00000059.jpg     12480080		NO          5185416		deleted.img
+00000060.jpg     12527143		NO          5138353		deleted.img
+00000061.jpg     12527465		NO          5138031		deleted.img
+00000062.jpg     12581567		NO          5226019		deleted.img
+00000063.jpg     12906004		NO          5017309		deleted.img
+00000064.jpg     13356495		NO          5223351		deleted.img
+00000065.jpg     13385918		NO          5193928		deleted.img
+00000066.jpg     13419238		NO          5160608		deleted.img
+00000067.jpg     13497759		NO          5223801		deleted.img
+00000068.jpg     13853549		NO          4956898		deleted.img
+00000069.jpg     13887858		NO          4922589		deleted.img
+00000070.jpg     13908173		NO          4902274		deleted.img
+00000071.jpg     13933554		NO          4876893		deleted.img
+00000072.jpg     13965623		NO          4844824		deleted.img
+00000073.jpg     13993475		NO          4816972		deleted.img
+00000074.jpg     14008619		NO          4801828		deleted.img
+00000075.jpg     14450777		NO          4359670		deleted.img
+00000076.jpg     14452783		NO          4357664		deleted.img
+00000077.jpg     15175666		NO          3634781		deleted.img
+00000078.jpg     16139897		NO          2670550		deleted.img
+00000079.jpg     16315733		NO          2494714		deleted.img
+00000080.jpg     16419839		NO          2390608		deleted.img
+00000081.jpg     16924736		NO          1885711		deleted.img
+00000082.jpg     16968828		NO          1841619		deleted.img
+00000083.jpg     17798675		NO          1011772		deleted.img
+00000084.jpg     18803535		NO             6912		deleted.img
+00000085.jpg     18805679		NO             4768		deleted.img
+
+
+Completed at Tue Dec  9 10:24:09 2025

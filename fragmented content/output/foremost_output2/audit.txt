@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Dec  6 11:56:23 2025
+Invocation: foremost -v -t pdf -o /home/kali/Desktop/CCF proj/test_output/foremost_output2 ./output/fragmented.img 
+Output directory: /home/kali/Desktop/CCF proj/test_output/foremost_output2
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: ./output/fragmented.img
+Start: Sat Dec  6 11:56:23 2025
+Length: 30 MB (31457280 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00020482.pdf 	      19 MB 	   10486784 	 
+Finish: Sat Dec  6 11:56:23 2025
+
+1 FILES EXTRACTED
+	
+pdf:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Dec  6 11:56:23 2025
